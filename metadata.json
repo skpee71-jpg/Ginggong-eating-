@@ -1,0 +1,6 @@
+{
+  "name": "Ginggong Eating",
+  "description": "AI Water, Nutrition & Health Tracker with barcode & label scanning",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
