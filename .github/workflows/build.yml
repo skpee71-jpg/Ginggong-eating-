@@ -22,6 +22,13 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
+      - name: Generate Wrapper if missing
+        run: |
+          if [ ! -f gradlew ]; then
+            gradle wrapper
+          fi
+          chmod +x gradlew
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug
 
@@ -30,4 +37,3 @@ jobs:
         with:
           name: Ginggong-Eating-APK
           path: app/build/outputs/apk/debug/*.apk
-          
